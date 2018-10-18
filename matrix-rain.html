@@ -4,14 +4,14 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<style>
 		.a{
-			color:orange;
-			font-size:3px;
+			color:lightblue;
+			font-size:2px;
 			position:fixed;
 			font-family: cursive;
 		}
 		.a1{
 			font-size:8px;
-			color:green;
+			color:teal;
 			position:fixed;
 			font-family: cursive;
 		}		
@@ -91,32 +91,24 @@ var	a="", b="",c="",d="",e="",f="",g="",h="",i="",j="",k="",l="",m="",n="",o="",
 var a1="";
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a1","b1","c1","d1","e1","f1","g1","h1","i1","j1","k1","l1","m1","n1","o1","p1","q1","r1","s1","t1","u1","v1","w1","x1","y1","z1"];
 var matrix = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,a1,b1,c1,d1,e1,f1,g1,h1,i1,j1,k1,l1,m1,n1,o1,p1,q1,r1,s1,t1,u1,v1,w1,x1,y1,z1];
-
 function print(a, i)
 {
 	a="";
-
 	for(var randoIt = 0; randoIt<100;randoIt++)
 	{
 		var random = Math.floor(Math.random() * 760);
 		var character = String.fromCharCode(random);
 		var escape = character.toString(16);
 		var spaces = ""
-		var num = Math.floor(Math.random() * 125);
+		var num = Math.floor(Math.random() * 60);
 		for(var numi=0; numi<num; numi++)
 		{
 			spaces += "\n&nbsp;&nbsp;"
 		}
 		a+= escape + spaces;		
 	}
-
-	
-
-	// a = escape + spaces + escape2 + spaces + escape3 + spaces + escape4 + spaces + escape5 + spaces + escape6;
 	matrix[i] = a;
 	document.getElementById(alphabet[i]).innerHTML = matrix[i];
-
-
 }
 function del(i){
 	matrix[i] = "";
@@ -150,7 +142,6 @@ function animation1()
 	setTimeout(function() {print(x,23);}, 2400);
 	setTimeout(function() {print(y,24);}, 2500);
 	setTimeout(function() {print(z,25);}, 2600);
-
 	setTimeout(function() {del(0);},1700);
 	setTimeout(function() {del(1);},1800);
 	setTimeout(function() {del(2);},1900);
@@ -233,11 +224,10 @@ function animation2()
 	setTimeout(function() {del(50);},3200);
 	setTimeout(function() {del(51);},3300);	
 }
-
-
-setInterval(animation1, 3000);
+animation1();
+animation2();
+setInterval(animation1, 1600);
 setInterval(animation2,3300);
-
 </script>
 
 </body>
