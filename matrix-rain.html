@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#a{
+			width:10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="a"></div>
+	
+
+	<script>
+		theMatrix=[]
+		setInterval(print, 100);
+		var i =0;
+		function print()
+		{
+			
+			var j = Math.floor(Math.random() * 1000);
+			var k = String.fromCharCode(j);
+			console.log(k);
+			document.getElementById("a").innerHTML += k.toString(16) + " ";
+			i++;
+		}
+	</script>
+
+</body>
+
+</html>
