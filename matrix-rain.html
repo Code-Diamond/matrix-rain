@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<style>
 		.a{
-			color:green;
-			margin-top:200px;
-			font-size:7px;
+			color:orange;
+			font-size:3px;
 			position:fixed;
+			font-family: cursive;
 		}
 		.a1{
-			color:lightgreen;
-			margin-top:200px;
+			font-size:8px;
+			color:green;
 			position:fixed;
+			font-family: cursive;
 		}		
 		body{
-				text-align:center;
 			background-color: black;
 		}
 	</style>
@@ -55,6 +56,7 @@
 
 </head>
 <body>
+	<div>
 	<span id="a" class="a"></span><span id="a1" class="a1"></span><br>
 	<span id="b" class="a"></span><span id="b1" class="a1"></span><br>
 	<span id="c" class="a"></span><span id="c1" class="a1"></span><br>
@@ -81,7 +83,7 @@
 	<span id="x" class="a"></span><span id="x1" class="a1"></span><br>
 	<span id="y" class="a"></span><span id="y1" class="a1"></span><br>
 	<span id="z" class="a"></span><span id="z1" class="a1"></span>
-
+</div>
 
 
 <script>
@@ -92,10 +94,25 @@ var matrix = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,a1,b1,c1,d1,e1
 
 function print(a, i)
 {
-	var random = Math.floor(Math.random() * 1000);
-	var character = String.fromCharCode(random);
-	var escape = character.toString(16);
-	a = escape;
+	a="";
+
+	for(var randoIt = 0; randoIt<100;randoIt++)
+	{
+		var random = Math.floor(Math.random() * 760);
+		var character = String.fromCharCode(random);
+		var escape = character.toString(16);
+		var spaces = ""
+		var num = Math.floor(Math.random() * 125);
+		for(var numi=0; numi<num; numi++)
+		{
+			spaces += "\n&nbsp;&nbsp;"
+		}
+		a+= escape + spaces;		
+	}
+
+	
+
+	// a = escape + spaces + escape2 + spaces + escape3 + spaces + escape4 + spaces + escape5 + spaces + escape6;
 	matrix[i] = a;
 	document.getElementById(alphabet[i]).innerHTML = matrix[i];
 
@@ -107,58 +124,59 @@ function del(i){
 }
 function animation1()
 {
-	setTimeout(function() {print(a,0);}, 10);
-	setTimeout(function() {print(b,1);}, 20);
-	setTimeout(function() {print(c,2);}, 30);
-	setTimeout(function() {print(d,3);}, 40);
-	setTimeout(function() {print(e,4);}, 50);
-	setTimeout(function() {print(f,5);}, 60);
-	setTimeout(function() {print(g,6);}, 70);
-	setTimeout(function() {del(0);}, 70);
-	setTimeout(function() {print(h,7);}, 80);
-	setTimeout(function() {del(1);}, 80);
-	setTimeout(function() {print(i,8);}, 90);
-	setTimeout(function() {del(2);}, 90);
-	setTimeout(function() {print(j,9);}, 100);
-	setTimeout(function() {del(3);},100);
-	setTimeout(function() {print(k,10);}, 110);
-	setTimeout(function() {del(4);},110);
-	setTimeout(function() {print(l,11);}, 120);
-	setTimeout(function() {del(5);},120);
-	setTimeout(function() {print(m,12);}, 130);		
-	setTimeout(function() {del(6);},130);
-	setTimeout(function() {print(n,13);}, 140);
-	setTimeout(function() {del(7);},140);
-	setTimeout(function() {print(o,14);}, 150);
-	setTimeout(function() {del(8);},150);
-	setTimeout(function() {print(p,15);}, 160);
-	setTimeout(function() {del(9);},160);
-	setTimeout(function() {print(q,16);}, 170);
-	setTimeout(function() {del(10);},170);
-	setTimeout(function() {print(r,17);}, 180);
-	setTimeout(function() {del(11);},180);
-	setTimeout(function() {print(s,18);}, 190);
-	setTimeout(function() {del(12);},190);
-	setTimeout(function() {print(t,19);}, 200);
-	setTimeout(function() {del(13);},200);
-	setTimeout(function() {print(u,20);}, 210);
-	setTimeout(function() {del(14);},210);
-	setTimeout(function() {print(v,21);}, 220);
-	setTimeout(function() {del(15);},220);
-	setTimeout(function() {print(w,22);}, 230);
-	setTimeout(function() {del(16);},230);
-	setTimeout(function() {print(x,23);}, 240);
-	setTimeout(function() {del(17);},240);
-	setTimeout(function() {print(y,24);}, 250);
-	setTimeout(function() {del(18);},250);
-	setTimeout(function() {print(z,25);}, 260);
-	setTimeout(function() {del(19);},270);
-	setTimeout(function() {del(20);},280);
-	setTimeout(function() {del(21);},290);
-	setTimeout(function() {del(22);},300);
-	setTimeout(function() {del(23);},310);
-	setTimeout(function() {del(24);},320);
-	setTimeout(function() {del(25);},330);	
+	setTimeout(function() {print(a,0);}, 100);
+	setTimeout(function() {print(b,1);}, 200);
+	setTimeout(function() {print(c,2);}, 300);
+	setTimeout(function() {print(d,3);}, 400);
+	setTimeout(function() {print(e,4);}, 500);
+	setTimeout(function() {print(f,5);}, 600);
+	setTimeout(function() {print(g,6);}, 700);
+	setTimeout(function() {print(h,7);}, 800);
+	setTimeout(function() {print(i,8);}, 900);
+	setTimeout(function() {print(j,9);}, 1000);
+	setTimeout(function() {print(k,10);}, 1100);
+	setTimeout(function() {print(l,11);}, 1200);
+	setTimeout(function() {print(m,12);}, 1300);		
+	setTimeout(function() {print(n,13);}, 1400);
+	setTimeout(function() {print(o,14);}, 1500);
+	setTimeout(function() {print(p,15);}, 1600);
+	setTimeout(function() {print(q,16);}, 1700);
+	setTimeout(function() {print(r,17);}, 1800);
+	setTimeout(function() {print(s,18);}, 1900);
+	setTimeout(function() {print(t,19);}, 2000);
+	setTimeout(function() {print(u,20);}, 2100);
+	setTimeout(function() {print(v,21);}, 2200);
+	setTimeout(function() {print(w,22);}, 2300);
+	setTimeout(function() {print(x,23);}, 2400);
+	setTimeout(function() {print(y,24);}, 2500);
+	setTimeout(function() {print(z,25);}, 2600);
+
+	setTimeout(function() {del(0);},1700);
+	setTimeout(function() {del(1);},1800);
+	setTimeout(function() {del(2);},1900);
+	setTimeout(function() {del(3);},2000);
+	setTimeout(function() {del(4);},2100);
+	setTimeout(function() {del(5);},2200);
+	setTimeout(function() {del(6);},2300);
+	setTimeout(function() {del(7);},2400);
+	setTimeout(function() {del(8);},2500);
+	setTimeout(function() {del(9);},2600);
+	setTimeout(function() {del(10);},2700);
+	setTimeout(function() {del(11);},2800);
+	setTimeout(function() {del(12);},2900);
+	setTimeout(function() {del(13);},3000);
+	setTimeout(function() {del(14);},3100);
+	setTimeout(function() {del(15);},3200);
+	setTimeout(function() {del(16);},3300);
+	setTimeout(function() {del(17);},3400);
+	setTimeout(function() {del(18);},3500);
+	setTimeout(function() {del(19);},3600);
+	setTimeout(function() {del(20);},3700);
+	setTimeout(function() {del(21);},3800);
+	setTimeout(function() {del(22);},3900);
+	setTimeout(function() {del(23);},4000);
+	setTimeout(function() {del(24);},4100);
+	setTimeout(function() {del(25);},4200);
 }
 function animation2()
 {
@@ -217,8 +235,10 @@ function animation2()
 }
 
 
-setInterval(animation1, 6000);
-setInterval(animation2, 3300);
+setInterval(animation1, 3000);
+setInterval(animation2,3300);
+
 </script>
+
 </body>
 </html>
