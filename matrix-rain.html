@@ -13,17 +13,39 @@
 	
 
 	<script>
-		theMatrix=[]
-		setInterval(print, 100);
+		var theMatrix=[]
+		setInterval(print, 25);
 		var i =0;
+		
+		function replaceAt(string, index, replace) {
+		  return string.substring(0, index) + replace + string.substring(index + 1);
+		}
+
 		function print()
 		{
-			
 			var j = Math.floor(Math.random() * 1000);
 			var k = String.fromCharCode(j);
-			console.log(k);
-			document.getElementById("a").innerHTML += k.toString(16) + " ";
+			theMatrix[i] = k.toString(16) + " "
+			document.getElementById("a").innerHTML += theMatrix[i];
 			i++;
+
+			if(i>8 && i%2==0)
+			{
+				var he = document.getElementById("a").innerHTML
+				he = replaceAt(he, i-1, " ")
+				he = replaceAt(he, i-2, " ") 
+				he = replaceAt(he, i-3, " ")
+				he = replaceAt(he, i-4, " ")
+				he = replaceAt(he, i-5, " ")
+				he = replaceAt(he, i-6, " ")
+				he = replaceAt(he, i-7, " ")
+				document.getElementById("a").innerHTML = he;
+			}
+			if(i%30==0)
+			{
+				he = "";
+				document.getElementById("a").innerHTML = he;
+			}
 		}
 	</script>
 
