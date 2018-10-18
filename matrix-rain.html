@@ -3,22 +3,49 @@
 <head>
 	<style>
 		.a{
-			/*width:10px;*/
-			/*margin-left:100px;*/
-			/*text-overflow: hidden;*/
-			/*float:left;*/
 			color:green;
 		}
 		body{
+				text-align:center;
 			background-color: black;
 		}
-		br{
-			margin-top:0px;
-		}
 	</style>
+
+	<script>
+		function reset(){
+			a="";b="";c="";d="";e="";f="";g="";h="";i="";j="";k="";l="";m="";n="";o="";p="";q="";r="";s="";t="";u="";v="";w="";x="";y="";z="";
+			matrix[0] = a;
+			matrix[1] = b;
+			matrix[2] = c;
+			matrix[3] = d;
+			matrix[4] = e;
+			matrix[5] = f;
+			matrix[6] = g;
+			matrix[7] = h;
+			matrix[8] = i;
+			matrix[9] = j;
+			matrix[10] = k;
+			matrix[11] = l;
+			matrix[12] = m;
+			matrix[13] = n;
+			matrix[14] = o;
+			matrix[15] = p;
+			matrix[16] = q;
+			matrix[17] = r;
+			matrix[18] = s;
+			matrix[19] = t;
+			matrix[20] = u;
+			matrix[21] = v;
+			matrix[22] = w;
+			matrix[23] = x;
+			matrix[24] = y;
+			matrix[25] = z;
+		}
+	</script>
+
+
 </head>
 <body>
-
 	<span id="a" class="a"></span><br>
 	<span id="b" class="a"></span><br>
 	<span id="c" class="a"></span><br>
@@ -49,584 +76,88 @@
 
 
 <script>
-	var a = "";
-	var b = "";
-	var c = "";
-	var d = "";
-	var e = "";
-	var f = "";
-	var g = "";
-	var h = "";
-	var i = "";
-	var j = "";
-	var k = "";
-	var l = "";
-	var m = "";
-	var n = "";
-	var o = "";
-	var p = "";
-	var q = "";
-	var r = "";
-	var s = "";
-	var t = "";
-	var u = "";
-	var v = "";
-	var w = "";
-	var x = "";
-	var y = "";
-	var z = "";
-	var matrix = [];
-
-	function printA()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		a += escape;
-		matrix[0] = a;
-		document.getElementById("a").innerHTML = matrix[0];
-	}		
-
-	function printB()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		b += escape;
-		matrix[1] = b;
-		document.getElementById("b").innerHTML = matrix[1];
-		
-	}		
-	function printC()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		c += escape;
-		matrix[2] = c;
-		document.getElementById("c").innerHTML = matrix[2];
-	
-	}		
-	function printD()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		d += escape;
-		matrix[3] = d;
-		document.getElementById("d").innerHTML = matrix[3];		
-	}		
-	function printE()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		e += escape;
-		matrix[4] = e;
-		document.getElementById("e").innerHTML = matrix[4];		
-	}		
-	function printF()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		f += escape;
-		matrix[5] = f;
-		document.getElementById("f").innerHTML = matrix[5];		
-	}		
-	function printG()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		g += escape;
-		matrix[6] = g;
-		document.getElementById("g").innerHTML = matrix[6];		
-	}
-	function printH()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		h += escape;
-		matrix[7] = h;
-		document.getElementById("h").innerHTML = matrix[7];
-	}			
-	function printI()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		i += escape;
-		matrix[8] = i;
-		document.getElementById("i").innerHTML = matrix[8];		
-	}		
-	function printJ()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		j += escape;
-		matrix[9] = j;
-		document.getElementById("j").innerHTML = matrix[9];		
-	}		
-	function printK()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		k += escape;
-		matrix[10] = k;
-		document.getElementById("k").innerHTML = matrix[10];		
-	}		
-	function printL()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		l += escape;
-		matrix[11] = l;
-		document.getElementById("l").innerHTML = matrix[11];
-	}		
-	function printM()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		m += escape;
-		matrix[12] = m;
-		document.getElementById("m").innerHTML = matrix[12];		
-	}		
-	function printN()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		n += escape;
-		matrix[13] = n;
-		document.getElementById("n").innerHTML = matrix[13];		
-	}		
-	function printO()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		o += escape;
-		matrix[14] = o;
-		document.getElementById("o").innerHTML = matrix[14];		
-
-	}		
-	function printP()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		p += escape;
-		matrix[15] = p;
-		document.getElementById("p").innerHTML = matrix[15];		
-	}		
-	function printQ()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		q += escape;
-		matrix[16] = q;
-		document.getElementById("q").innerHTML = matrix[16];		
-	}		
-	function printR()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		r += escape;
-		matrix[17] = r;
-		document.getElementById("r").innerHTML = matrix[17];		
-	}		
-	function printS()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		s += escape;
-		matrix[18] = s;
-		document.getElementById("s").innerHTML = matrix[18];		
-	}		
-	function printT()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		t += escape;
-		matrix[19] = t;
-		document.getElementById("t").innerHTML = matrix[19];		
-	}		
-	function printU()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		u += escape;
-		matrix[20] = u;
-		document.getElementById("u").innerHTML = matrix[20];		
-	}		
-	function printV()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		v += escape;
-		matrix[21] = v;
-		document.getElementById("v").innerHTML = matrix[21];		
-	}		
-	function printW()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		w += escape;
-		matrix[22] = w;
-		document.getElementById("w").innerHTML = matrix[22];		
-	}		
-	function printX()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		x += escape;
-		matrix[23] = x;
-		document.getElementById("x").innerHTML = matrix[23];		
-	}		
-	function printY()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		y += escape;
-		matrix[24] = y;
-		document.getElementById("y").innerHTML = matrix[24];		
-	}		
-	function printZ()
-	{
-
-		var random = Math.floor(Math.random() * 1000);
-		var character = String.fromCharCode(random);
-		var escape = character.toString(16);
-		z += escape;
-		matrix[25] = z;
-		document.getElementById("z").innerHTML = matrix[25];		
-	}
-	// setInterval(printAll26, 25);
-	// setInterval(function() {
-	// printAll26();
-	setTimeout(printA, 10);
-	setTimeout(printB, 20);
-	setTimeout(printC, 30);
-	setTimeout(printD, 40);
-	setTimeout(printE, 50);
-	setTimeout(printF, 60);
-	setTimeout(printG, 70);
-	setTimeout(delete0, 70);
-	setTimeout(printH, 80);
-	setTimeout(delete1, 80);
-	setTimeout(printI, 90);
-	setTimeout(delete2, 90);
-	setTimeout(printJ, 100);
-	setTimeout(delete3,100);
-	setTimeout(printK, 110);
-	setTimeout(delete4,110);
-	setTimeout(printL, 120);
-	setTimeout(delete5,120);
-	setTimeout(printM, 130);		
-	setTimeout(delete6,130);
-	setTimeout(printN, 140);
-	setTimeout(delete7,140);
-	setTimeout(printO, 150);
-	setTimeout(delete8,150);
-	setTimeout(printP, 160);
-	setTimeout(delete9,160);
-	setTimeout(printQ, 170);
-	setTimeout(delete10,170);
-	setTimeout(printR, 180);
-	setTimeout(delete11,180);
-	setTimeout(printS, 190);
-	setTimeout(delete12,190);
-	setTimeout(printT, 200);
-	setTimeout(delete13,200);
-	setTimeout(printU, 210);
-	setTimeout(delete14,210);
-	setTimeout(printV, 220);
-	setTimeout(delete15,220);
-	setTimeout(printW, 230);
-	setTimeout(delete16,230);
-	setTimeout(printX, 240);
-	setTimeout(delete17,240);
-	setTimeout(printY, 250);
-	setTimeout(delete18,250);
-	setTimeout(printZ, 260);
-	setTimeout(delete19,270);
-	setTimeout(delete20,280);
-	setTimeout(delete21,290);
-	setTimeout(delete22,300);
-	setTimeout(delete23,310);
-	setTimeout(delete24,320);
-	setTimeout(delete25,330);
-	// deleteAll
-// },40);
-
-
-	function delete0(){
-		matrix[0] = "";
-		document.getElementById("a").innerHTML = matrix[0];
-
-	}
-	function delete1(){
-		matrix[1] = "";
-		document.getElementById("b").innerHTML = matrix[1];
-	}	
-
-	function delete2(){
-		matrix[2] = "";
-		document.getElementById("c").innerHTML = matrix[2];
-	}	
-
-	function delete3(){
-		matrix[3] = "";
-		document.getElementById("d").innerHTML = matrix[3];
-	}	
-
-
-	function delete4(){
-		matrix[4] = "";
-		document.getElementById("e").innerHTML = matrix[4];
-	}	
-
-	function delete5(){
-		matrix[5] = "";
-		document.getElementById("f").innerHTML = matrix[5];
-	}	
-
-	function delete6(){
-		matrix[6] = "";
-		document.getElementById("g").innerHTML = matrix[6];
-	}	
-
-	function delete7(){
-		matrix[7] = "";
-		document.getElementById("h").innerHTML = matrix[7];
-	}	
-
-	function delete8(){
-		matrix[8] = "";
-		document.getElementById("i").innerHTML = matrix[8];
-	}	
-
-	function delete9(){
-		matrix[9] = "";
-		document.getElementById("j").innerHTML = matrix[9];
-	}	
-
-	function delete10(){
-		matrix[10] = "";
-		document.getElementById("k").innerHTML = matrix[10];
-	}	
-
-	function delete11(){
-		matrix[11] = "";
-		document.getElementById("l").innerHTML = matrix[11];
-	}	
-
-	function delete12(){
-		matrix[12] = "";
-		document.getElementById("m").innerHTML = matrix[12];
-	}	
-
-	function delete13(){
-		matrix[13] = "";
-		document.getElementById("n").innerHTML = matrix[13];
-	}	
-
-	function delete14(){
-		matrix[14] = "";
-		document.getElementById("o").innerHTML = matrix[14];
-	}	
-
-	function delete15(){
-		matrix[15] = "";
-		document.getElementById("p").innerHTML = matrix[15];
-	}	
-
-	function delete16(){
-		matrix[16] = "";
-		document.getElementById("q").innerHTML = matrix[16];
-	}	
-
-	function delete17(){
-		matrix[17] = "";
-		document.getElementById("r").innerHTML = matrix[17];
-	}	
-
-	function delete18(){
-		matrix[18] = "";
-		document.getElementById("s").innerHTML = matrix[18];
-	}	
-
-	function delete19(){
-		matrix[19] = "";
-		document.getElementById("t").innerHTML = matrix[19];
-	}	
-
-	function delete20(){
-		matrix[20] = "";
-		document.getElementById("u").innerHTML = matrix[20];
-	}	
-
-	function delete21(){
-		matrix[21] = "";
-		document.getElementById("v").innerHTML = matrix[21];
-	}	
-
-	function delete22(){
-		matrix[22] = "";
-		document.getElementById("w").innerHTML = matrix[22];
-	}	
-
-	function delete23(){
-		matrix[23] = "";
-		document.getElementById("x").innerHTML = matrix[23];
-	}	
-
-	function delete24(){
-		matrix[24] = "";
-		document.getElementById("y").innerHTML = matrix[24];
-	}	
-
-	function delete25(){
-		matrix[25] = "";
-		document.getElementById("z").innerHTML = matrix[25];
-	}	
-
-	function printAll26()
-	{
-		for(var aa = 0; aa < 26; aa++)
-		{
-
-			printA();
-			printB();
-			printC();
-			printD();
-			printE();
-			printF();
-			printG();
-			printH();
-			printI();
-			printJ();
-			printK();
-			printL();
-			printM();
-			printN();
-			printO();
-			printP();
-			printQ();
-			printR();
-			printS();
-			printT();
-			printU();
-			printV();
-			printW();
-			printX();
-			printY();
-			printZ();
-
-			
-			matrix[0] = a;
-			matrix[1] = b;
-			matrix[2] = c;
-			matrix[3] = d;
-			matrix[4] = e;
-			matrix[5] = f;
-			matrix[6] = g;
-			matrix[7] = h;
-			matrix[8] = i;
-			matrix[9] = j;
-			matrix[10] = k;
-			matrix[11] = l;
-			matrix[12] = m;
-			matrix[13] = n;
-			matrix[14] = o;
-			matrix[15] = p;
-			matrix[16] = q;
-			matrix[17] = r;
-			matrix[18] = s;
-			matrix[19] = t;
-			matrix[20] = u;
-			matrix[21] = v;
-			matrix[22] = w;
-			matrix[23] = x;
-			matrix[24] = y;
-			matrix[25] = z;
-
-
-			document.getElementById("a").innerHTML = matrix[0];
-			document.getElementById("b").innerHTML = matrix[1];
-			document.getElementById("c").innerHTML = matrix[2];
-			document.getElementById("d").innerHTML = matrix[3];
-			document.getElementById("e").innerHTML = matrix[4];
-			document.getElementById("f").innerHTML = matrix[5];
-			document.getElementById("g").innerHTML = matrix[6];
-			document.getElementById("h").innerHTML = matrix[7];
-			document.getElementById("i").innerHTML = matrix[8];
-			document.getElementById("j").innerHTML = matrix[9];
-			document.getElementById("k").innerHTML = matrix[10];
-			document.getElementById("l").innerHTML = matrix[11];
-			document.getElementById("m").innerHTML = matrix[12];
-			document.getElementById("n").innerHTML = matrix[13];
-			document.getElementById("o").innerHTML = matrix[14];
-			document.getElementById("p").innerHTML = matrix[15];
-			document.getElementById("q").innerHTML = matrix[16];
-			document.getElementById("r").innerHTML = matrix[17];
-			document.getElementById("s").innerHTML = matrix[18];
-			document.getElementById("t").innerHTML = matrix[19];
-			document.getElementById("u").innerHTML = matrix[20];
-			document.getElementById("v").innerHTML = matrix[21];
-			document.getElementById("w").innerHTML = matrix[22];
-			document.getElementById("x").innerHTML = matrix[23];
-			document.getElementById("y").innerHTML = matrix[24];
-			document.getElementById("z").innerHTML = matrix[25];
-
-		}
-
-	}		
-
-
+var	a="", b="",c="",d="",e="",f="",g="",h="",i="",j="",k="",l="",m="",n="",o="",p="",q="",r="",s="",t="",u="",v="",w="",x="",y="",z="";
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var matrix = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+
+function print(a, i)
+{
+	var random = Math.floor(Math.random() * 1000);
+	var character = String.fromCharCode(random);
+	var escape = character.toString(16);
+	a = escape;
+	matrix[i] = a;
+	document.getElementById(alphabet[i]).innerHTML = matrix[i];
+
+
+}
+function del(i){
+	matrix[i] = "";
+	document.getElementById(alphabet[i]).innerHTML = matrix[i];
+}
+function animation1()
+{
+	setTimeout(function() {print(a,0);}, 10);
+	setTimeout(function() {print(b,1);}, 20);
+	setTimeout(function() {print(c,2);}, 30);
+	setTimeout(function() {print(d,3);}, 40);
+	setTimeout(function() {print(e,4);}, 50);
+	setTimeout(function() {print(f,5);}, 60);
+	setTimeout(function() {print(g,6);}, 70);
+	setTimeout(function() {del(0);}, 70);
+	setTimeout(function() {print(h,7);}, 80);
+	setTimeout(function() {del(1);}, 80);
+	setTimeout(function() {print(i,8);}, 90);
+	setTimeout(function() {del(2);}, 90);
+	setTimeout(function() {print(j,9);}, 100);
+	setTimeout(function() {del(3);},100);
+	setTimeout(function() {print(k,10);}, 110);
+	setTimeout(function() {del(4);},110);
+	setTimeout(function() {print(l,11);}, 120);
+	setTimeout(function() {del(5);},120);
+	setTimeout(function() {print(m,12);}, 130);		
+	setTimeout(function() {del(6);},130);
+	setTimeout(function() {print(n,13);}, 140);
+	setTimeout(function() {del(7);},140);
+	setTimeout(function() {print(o,14);}, 150);
+	setTimeout(function() {del(8);},150);
+	setTimeout(function() {print(p,15);}, 160);
+	setTimeout(function() {del(9);},160);
+	setTimeout(function() {print(q,16);}, 170);
+	setTimeout(function() {del(10);},170);
+	setTimeout(function() {print(r,17);}, 180);
+	setTimeout(function() {del(11);},180);
+	setTimeout(function() {print(s,18);}, 190);
+	setTimeout(function() {del(12);},190);
+	setTimeout(function() {print(t,19);}, 200);
+	setTimeout(function() {del(13);},200);
+	setTimeout(function() {print(u,20);}, 210);
+	setTimeout(function() {del(14);},210);
+	setTimeout(function() {print(v,21);}, 220);
+	setTimeout(function() {del(15);},220);
+	setTimeout(function() {print(w,22);}, 230);
+	setTimeout(function() {del(16);},230);
+	setTimeout(function() {print(x,23);}, 240);
+	setTimeout(function() {del(17);},240);
+	setTimeout(function() {print(y,24);}, 250);
+	setTimeout(function() {del(18);},250);
+	setTimeout(function() {print(z,25);}, 260);
+	setTimeout(function() {del(19);},270);
+	setTimeout(function() {del(20);},280);
+	setTimeout(function() {del(21);},290);
+	setTimeout(function() {del(22);},300);
+	setTimeout(function() {del(23);},310);
+	setTimeout(function() {del(24);},320);
+	setTimeout(function() {del(25);},330);	
+}
+// for(var i=0;i<5;i++)
+// {
+//    setTimeout(function() {print(matrix[i],i);}, i*1000);
+// }
+
+
+setInterval(animation1, 1000);
 
 </script>
-
 </body>
-
 </html>
