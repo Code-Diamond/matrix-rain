@@ -61,7 +61,7 @@
 		  return string.substring(0, index) + replace + string.substring(index + 1);
 		}
 
-		function print(a)
+		function print(a, iteration)
 		{
 			
 			var j = Math.floor(Math.random() * 1000);
@@ -70,6 +70,16 @@
 			document.getElementById(a).innerHTML += theMatrix[iteration];
 			iteration++;
 
+			if(iteration>8 && i%2==0)
+			{
+				var he = document.getElementById(a).innerHTML
+				document.getElementById(a).innerHTML = he;
+			}
+			if(iteration%30==0)
+			{
+				he = "";
+				document.getElementById(a).innerHTML = he;
+			}
 		}
 	</script>
 
