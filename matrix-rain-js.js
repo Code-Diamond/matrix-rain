@@ -1,89 +1,91 @@
 
-function createDiv(id)
-{
-	var div = document.createElement("div");
-	div.setAttribute("id", "div"+id );
-	document.body.appendChild(div);
-}
+// function createDiv(id)
+// {
+// 	var div = document.createElement("div");
+// 	div.setAttribute("id", "div"+id );
+// 	document.body.appendChild(div);
+// }
 
-function createSpan(divId, id)
+function createSpan(id)
 {
 	var span = document.createElement("span");
-	span.setAttribute("id", "div"+divId+"span"+id);
+	span.setAttribute("id", id);
 
 	// span.appendChild(node);
-	document.getElementById("div"+divId).appendChild(span);	
+	document.body.appendChild(span);	
 }
-function setSpan(divId, id)
+function setSpan(x,y, id)
 {
-	var spanID="div"+divId+"span"+id;
 	var text = generateRandomCharacter();
-	document.getElementById(spanID).innerHTML = text;
+	document.getElementById(id).innerHTML = text;
+	document.getElementById(id).style.left = x*20+"px"
+	document.getElementById(id).style.top = y*5+"px"
 }
 
 function generateRandomCharacter()
 {
-	var coinFlip = Math.floor(Math.random() * 20);
-	if(coinFlip<5)
-	{
+	// var coinFlip = Math.floor(Math.random() * 20);
+	// if(coinFlip<5)
+	// {
 		var random = Math.floor(Math.random() * 760);
 		var character = String.fromCharCode(random);
 		var escape = character.toString(16);		
-	}
-	else
-	{
-		escape = "&nbsp;"
-	}
+	// }
+	// else
+	// {
+		// escape = "&nbsp;"
+	// }
 
 	return escape;
 }
 
-function del(divId,id){
-	document.getElementById("div"+divId+"span"+id).innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 	
+function del(id){
+	document.getElementById(id).innerHTML = "" 	
 }
-function dest(divId,id){
-	document.getElementById("div"+divId+"span"+id).innerHTML = "" 	
+function dest(id){
+	document.getElementById(id).innerHTML = "" 	
 }
 
 function createTimeoutFunction(i, j) {
-	// var coinFlip = Math.floor(Math.random() * 4)+1;
-	var coinFlip2 = Math.floor(Math.random() *10)+1;
-	setTimeout(function() {setSpan(i,j);}, j*1*coinFlip2);
-	setTimeout(function() {del(i,j);}, j*3*coinFlip2);
+	var coinFlip = Math.floor(Math.random() * 1500)+1;
+	var k = i + "|" + j
+	var coinFlip2 = Math.floor(Math.random() * 150)+1;
+	setTimeout(function() {setSpan(i,j,k);}, j*10);
+	setTimeout(function() {del(k);}, j*10+coinFlip);
 }
 
 // function createDelTimer(i, j) {
 
 // }
 
-function makeDivsAndSpans(){
-	for(var i=0; i <40; i++)
+function makeSpans(){
+	for(var i=0; i <100; i++)
 	{
-		createDiv(i);
-		for(var j=0; j<40;j++)
+		// createDiv(i);
+		for(var j=0; j<240;j++)
 		{
-			createSpan(i, j);			
+			createSpan(i+"|"+j);			
+			var k = i + "|" + j;
+
 		}
 	}
 }
+function makeRainDrop(i)
+{
+	
+	for(var j=0; j<240;j++)
+	{
 
+		createTimeoutFunction(i,j);
+	}
+
+}
 function run()
 {
-	for(var i=0; i <40; i++)
-	{
-		for(var j=0; j<40;j++)
-		{
-			dest(i,j)
-	
-		}
-	}
-	for(var i=0; i <40; i++)
-	{
-		for(var j=0; j<40;j++)
-		{
-			createTimeoutFunction(i,j);
-			// createDelTimer(i,j);
-		}
-	}
-	setTimeout(run,1600);
+	setInterval( function() {
+		var i = Math.floor(Math.random() * 100);
+		var j = Math.floor(Math.random() * 10000);
+		setTimeout(function() {makeRainDrop(i);},j);
+	},500);
+	// setTimeout(run,1600);
 }
